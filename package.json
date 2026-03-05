@@ -1,6 +1,6 @@
 {
   "name": "naffu",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Local-first agentic deepwiki for codebases",
   "main": "dist/index.js",
   "bin": {
