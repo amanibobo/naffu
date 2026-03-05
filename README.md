@@ -4,7 +4,7 @@
 
 Cursor · Claude Code · GitHub Copilot · Windsurf · Open Code
 
-by Amani Bobo · v0.1.0 · MIT License
+by Amani Bobo · MIT License
 
 ## What is Naffu?
 
