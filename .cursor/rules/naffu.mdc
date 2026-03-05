@@ -1,0 +1,16 @@
+---
+description: Naffu documentation agent - use when user asks to document the codebase
+globs: ["**/*"]
+---
+
+# Naffu Documentation
+
+When the user asks you to document this project, use Naffu:
+
+1. Run `npx naffu index .` to index the codebase and generate docs
+2. Read `.naffu/AGENTS.md` for full instructions
+3. Create Mermaid diagrams in `.naffu/mermaids/`
+4. Create doc pages in `.naffu/docs/` as JSON with title, slug, content (markdown)
+5. Run `npx naffu open` to view the wiki
+
+Do not modify `.naffu/AGENTS.md`.

@@ -1,0 +1,45 @@
+{
+  "name": "naffu",
+  "version": "0.1.0",
+  "description": "Local-first agentic deepwiki for codebases",
+  "main": "dist/index.js",
+  "bin": {
+    "naffu": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/cli.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.1.0",
+    "@huggingface/inference": "^2.7.1",
+    "@langchain/ollama": "^0.1.0",
+    "chromadb": "^1.0.0",
+    "express": "^4.18.2",
+    "open": "^10.1.0",
+    "openai": "^4.29.2",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.3",
+    "@types/yargs": "^17.0.35",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "files": [
+    "dist",
+    "tools",
+    "ui"
+  ],
+  "keywords": [
+    "ai",
+    "deepwiki",
+    "codebase",
+    "documentation",
+    "agents"
+  ],
+  "author": "Amani Bobo",
+  "license": "MIT"
+}
