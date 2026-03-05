@@ -8,7 +8,7 @@ by Amani Bobo · MIT License
 
 ## What is Naffu?
 
-Naffu is a local-first documentation engine for agentic coding. It works alongside AI coding agents to automatically analyze your codebase, generate interactive documentation, build Mermaid dependency graphs, and power Q&A—all stored locally in `.naffu/`. Think of it like Davia: **interactive docs designed for coding agents**.
+Naffu is a local-first documentation engine for agentic coding. It works alongside AI coding agents to automatically analyze your codebase, generate interactive documentation, build Mermaid dependency graphs, and power Q&A—all stored locally in `.naffu/`.
 
 ## Quick Start
 
