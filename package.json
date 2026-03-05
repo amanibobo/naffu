@@ -4,7 +4,7 @@
   "description": "Local-first agentic deepwiki for codebases",
   "main": "dist/index.js",
   "bin": {
-    "naffu": "./dist/cli.js"
+    "naffu": "dist/cli.js"
   },
   "scripts": {
     "build": "tsc",
@@ -38,8 +38,19 @@
     "deepwiki",
     "codebase",
     "documentation",
-    "agents"
+    "agents",
+    "cursor",
+    "claude",
+    "davia"
   ],
   "author": "Amani Bobo",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amanibobo/naffu.git"
+  },
+  "homepage": "https://github.com/amanibobo/naffu#readme",
+  "bugs": {
+    "url": "https://github.com/amanibobo/naffu/issues"
+  }
 }

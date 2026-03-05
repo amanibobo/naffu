@@ -34,7 +34,7 @@ Then ask your agent: **"Document this project. Use Naffu to generate the wiki."*
 | `naffu open` | Launch docs UI at localhost:4242 |
 | `naffu config` | Interactive model/API key wizard |
 
-## .naffu Folder Structure (Davia-style)
+## .naffu Folder Structure
 
 ```
 .naffu/
@@ -55,36 +55,16 @@ Then ask your agent: **"Document this project. Use Naffu to generate the wiki."*
 - **Focused**: "Using Naffu, document only the schemas/classes. Include name, description, main fields."
 - **Diagram**: "Document the auth flow with a Mermaid diagram. Create a file in .naffu/mermaids/"
 
-## Using Naffu in Another Project
-
-**Option 1: npx (no install)**
+## Installation
 
 ```bash
-cd /path/to/your-project
-npx /Users/amanibobo/naffu init
-npx /Users/amanibobo/naffu index .
-npx /Users/amanibobo/naffu open
+npm install -g naffu
 ```
 
-**Option 2: npm link (dev)**
+Or use without installing:
 
 ```bash
-cd /Users/amanibobo/naffu
-npm run build
-npm link
-
-cd /path/to/your-project
-naffu init
-naffu index .
-naffu open
-```
-
-**Option 3: Add as devDependency**
-
-```bash
-cd /path/to/your-project
-npm install /Users/amanibobo/naffu --save-dev
-npx naffu init
+npx naffu init --agent=cursor
 npx naffu index .
 npx naffu open
 ```
