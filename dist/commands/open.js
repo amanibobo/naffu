@@ -7,15 +7,32 @@ exports.openDocs = openDocs;
 const express_1 = __importDefault(require("express"));
 const open_1 = __importDefault(require("open"));
 const path_1 = __importDefault(require("path"));
+const fs_1 = __importDefault(require("fs"));
 async function openDocs(cwd) {
     const app = (0, express_1.default)();
     const naffuDir = path_1.default.join(cwd, ".naffu");
-    const uiPath = path_1.default.join(__dirname, "..", "..", "ui");
+    const pkgRoot = path_1.default.join(__dirname, "..", "..");
+    // Next.js static export outputs to ui/out
+    const uiOutPath = path_1.default.join(pkgRoot, "ui", "out");
+    const uiPath = fs_1.default.existsSync(uiOutPath) ? uiOutPath : path_1.default.join(pkgRoot, "ui");
     app.use(express_1.default.static(naffuDir));
     app.use(express_1.default.static(uiPath));
     // Serve index.html for root
     app.get("/", (_req, res) => {
-        res.sendFile(path_1.default.join(uiPath, "index.html"));
+        const indexPath = path_1.default.join(uiPath, "index.html");
+        if (fs_1.default.existsSync(indexPath)) {
+            res.sendFile(indexPath);
+        }
+        else {
+            res.send(`
+        <!DOCTYPE html>
+        <html><head><title>Naffu</title></head>
+        <body>
+          <h1>Naffu</h1>
+          <p>UI not built. Run <code>npm run build:ui</code> in the naffu package.</p>
+        </body></html>
+      `);
+        }
     });
     await new Promise((resolve) => {
         const server = app.listen(4242, "localhost", async () => {
